@@ -1,60 +1,60 @@
 # GeoKeyAPI
 
-GeoKeyAPI é uma API desenvolvida em Java com Spring Boot, que fornece informações sobre países, estados e cidades. A API permite buscar dados geográficos de forma eficiente, suportando consultas de todos os países, estados por país e cidades por estado e país.
+GeoKeyAPI is an API developed in Java with Spring Boot, which provides information about countries, states, and cities. The API allows you to efficiently retrieve geographic data, supporting queries for all countries, states by country, and cities by state and country.
 
-## Funcionalidades
+## Features
 
-- **Listar todos os países**: A API permite obter uma lista de todos os países disponíveis, incluindo informações como nome, código telefônico, emoji da bandeira, moeda e símbolo da moeda.
-- **Listar estados por país**: A API permite obter uma lista de todos os estados disponíveis de um determinado país, retornando o nome dos estados.
-- **Listar cidades por estado e país**: A API permite buscar todas as cidades de um estado específico dentro de um determinado país.
+- **List all countries**: The API allows you to get a list of all available countries, including information such as name, phone code, flag emoji, currency, and currency symbol.
+- **List states by country**: The API allows you to retrieve a list of all available states in a specific country, returning the names of the states.
+- **List cities by state and country**: The API enables you to search for all cities in a specific state within a given country.
 
 ## Endpoints
 
-- `GET /locales/country/all` - Retorna uma lista com todos os países.
-- `GET /locales/state/findAllStatesByCountry/{country}` - Retorna uma lista com todos os estados de um determinado país.
-- `GET /locales/city/findAllCityByCountryAndStates/{country}/{state}` - Retorna uma lista de cidades de um determinado estado e país.
+- `GET /locales/country/all` - Returns a list of all countries.
+- `GET /locales/state/findAllStatesByCountry/{country}` - Returns a list of all states in a specific country.
+- `GET /locales/city/findAllCityByCountryAndStates/{country}/{state}` - Returns a list of cities in a specific state and country.
 
-## Fonte de Dados
+## Data Source
 
-Os dados de países, estados e cidades utilizados pela API foram extraídos do seguinte repositório: [dr5hn/countries-states-cities-database](https://github.com/dr5hn/countries-states-cities-database). Este repositório contém uma base de dados completa com informações geográficas atualizadas, fornecendo uma ampla gama de dados de países, estados e cidades.
+The data for countries, states, and cities used by the API was extracted from the following repository: [dr5hn/countries-states-cities-database](https://github.com/dr5hn/countries-states-cities-database). This repository contains a complete database with updated geographic information, providing a wide range of data on countries, states, and cities.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
-- **Java 17**: Linguagem de programação utilizada no desenvolvimento.
-- **Spring Boot 3.3.4**: Framework usado para construir a API REST.
-- **PostgreSQL**: Banco de dados utilizado para armazenar as informações de países, estados e cidades.
-- **Spring Data JPA**: Para realizar operações no banco de dados de forma simplificada.
-- **HikariCP**: Para gerenciamento de conexões com o banco de dados.
+- **Java 17**: Programming language used in development.
+- **Spring Boot 3.3.4**: Framework used to build the REST API.
+- **PostgreSQL**: Database used to store information about countries, states, and cities.
+- **Spring Data JPA**: To simplify database operations.
+- **HikariCP**: For managing database connections.
 
-## Instalação
+## Installation
 
-1. Clone este repositório:
+1. Clone this repository:
 
    ```bash
-   git clone https://github.com/seu-usuario/GeoKeyAPI.git
+   git clone https://github.com/your-username/GeoKeyAPI.git
    ```
-2. Navegue até o diretório do projeto:
+2. Navigate to the project directory:
    ```bash
    cd GeoKeyAPI
    ```
-3. Configure seu banco de dados PostgreSQL com os dados fornecidos no [repositório de dados](https://github.com/dr5hn/countries-states-cities-database). Para isso, baixe o conteúdo do repositório e importe os arquivos SQL para o seu banco de dados PostgreSQL.
+3. Configure your PostgreSQL database with the data provided in the [data repository](https://github.com/dr5hn/countries-states-cities-database). To do this, download the content of the repository and import the SQL files into your PostgreSQL database.
 
-4. Configure as propriedades do banco de dados no arquivo application.properties:
+4. Configure the database properties in the `application.properties` file:
    ```bash
-   spring.datasource.url=jdbc:postgresql://localhost:5432/seu-banco
-   spring.datasource.username=seu-usuario
-   spring.datasource.password=sua-senha
+   spring.datasource.url=jdbc:postgresql://localhost:5432/your-database
+   spring.datasource.username=your-username
+   spring.datasource.password=your-password
    spring.jpa.hibernate.ddl-auto=update
    ```
 
-## Contribuição
+## Contribution
 
-Contribuições são bem-vindas! Se você deseja contribuir com o projeto, faça um fork do repositório, crie um branch com suas alterações e envie um pull request.
+Contributions are welcome! If you would like to contribute to the project, please fork the repository, create a branch with your changes, and submit a pull request.
 
-## Licença
+## License
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) para mais informações.
+This project is licensed under the MIT license. See the [LICENSE](./LICENSE) file for more details.
 
-## Créditos
+## Credits
 
-- [dr5hn/countries-states-cities-database](https://github.com/dr5hn/countries-states-cities-database): Base de dados usada no projeto.
+- [dr5hn/countries-states-cities-database](https://github.com/dr5hn/countries-states-cities-database): Database used in the project.

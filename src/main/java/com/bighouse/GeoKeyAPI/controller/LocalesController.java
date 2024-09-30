@@ -34,8 +34,12 @@ public class LocalesController {
     public List<StateDTO> getAllStateByCountry(@PathVariable String country){
         return stateService.findAllCitiesByCountry(country);
     }
-    @GetMapping("city/findALlCityByCountryAndStates/{country}/{state}")
+    @GetMapping("/city/findAllCityByCountryAndStates/{country}/{state}")
     public List<CityDTO> getAllCityByCountryAndStates(@PathVariable String country, @PathVariable String state){
         return cityService.findAllCitiesByCountry(country, state);
+    }
+    @GetMapping("/country/getAllPhoneCodeAndEmojis")
+    public List<PhoneCodeDTO> getAllPhoneCodeAndEmojis(){
+        return countryService.findAllPhoneCodeAndEmojis();
     }
 }
